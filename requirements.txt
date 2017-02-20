@@ -1,0 +1,5 @@
+joblib==0.10.3
+pycorenlp==0.3.0
+nltk==3.2.1
+flask==0.11.1
+typing==3.5.2.2
