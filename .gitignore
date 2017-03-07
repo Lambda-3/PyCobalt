@@ -1,5 +1,6 @@
 .idea/runConfigurations.xml
-
+.idea/markdown-navigator/
+.idea/markdown-navigator.xml
 .idea/dictionaries
 .idea/misc.xml
 .idea/*.iml

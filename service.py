@@ -26,7 +26,7 @@ def resolve_wiki():
         return make_response(jsonify({'message': '`text` and `uri` fields are mandatory.'}), 400)
 
     substitutions = Resolver.resolve(text, uri)
-    substituted, _ = Resolver.substituteInText(text, substitutions)
+    substituted = Resolver.substitute_in_text(text, substitutions)
 
     return jsonify({'text': substituted})
 
@@ -42,7 +42,7 @@ def resolve_text():
         return make_response(jsonify({'message': '`text` field is mandatory.'}), 400)
 
     substitutions = Resolver.resolve(text, '')
-    substituted, _ = Resolver.substituteInText(text, substitutions)
+    substituted = Resolver.substitute_in_text(text, substitutions)
 
     return jsonify({'text': substituted})
 

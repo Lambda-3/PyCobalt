@@ -3,6 +3,8 @@ import random
 import nltk
 from nltk.corpus import names
 
+from constant_types import GenderType
+
 
 class GenderClassifier(object):
     def __init__(self):
@@ -17,8 +19,8 @@ class GenderClassifier(object):
 
     def __train(self):
         # Training a gender classifier
-        labeled_names = ([(name, 'male') for name in names.words('male.txt')] +
-                         [(name, 'female') for name in names.words('female.txt')])
+        labeled_names = ([(name, GenderType.MALE) for name in names.words('male.txt')] +
+                         [(name, GenderType.FEMALE) for name in names.words('female.txt')])
 
         random.shuffle(labeled_names)
 
@@ -26,5 +28,5 @@ class GenderClassifier(object):
         train_set, test_set = feature_sets[500:], feature_sets[:500]
         return nltk.NaiveBayesClassifier.train(train_set)
 
-    def classify(self, name: str) -> str:
+    def classify(self, name: str) -> GenderType:
         return self.classifier.classify(GenderClassifier.gender_features(name))

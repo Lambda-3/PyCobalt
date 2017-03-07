@@ -26,7 +26,7 @@ class TestResolverMethod(unittest.TestCase):
             Probably this is a clean sentence."""
         )
 
-        cleaned_text = Resolver._cleanText(input_text)
+        cleaned_text = Resolver._clean_text(input_text)
 
         expected_output = sent_tokenize(
             """I have multiple sentences for  years.
@@ -38,7 +38,7 @@ class TestResolverMethod(unittest.TestCase):
     def test_simple_sentence(self):
         input_text = "Donald Trump is the president of USA. He is a business man."
 
-        substituted, _ = Resolver.substituteInText(
+        substituted = Resolver.substitute_in_text(
             input_text, Resolver.resolve(input_text, ''))
 
         self.assertEqual(
@@ -49,7 +49,7 @@ class TestResolverMethod(unittest.TestCase):
     def test_simple_sentence_2(self):
         input_text = "Donald Trump is the president of USA. He is a business man."
 
-        substituted, _ = Resolver.substituteInText(
+        substituted = Resolver.substitute_in_text(
             input_text, Resolver.resolve(input_text, ''))
 
         self.assertEqual(

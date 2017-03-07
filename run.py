@@ -56,13 +56,13 @@ def _run(article: str) -> str:
 
     try:
         substitutions = Resolver.resolve(json_article['text'], json_article['id'])
-        substituted_text, resolved_sentences = Resolver.substituteInText(json_article['text'], substitutions)
+        substituted_text, resolved_sentences = Resolver.substitute_in_text(json_article['text'], substitutions)
 
-        entity_links = Resolver.getEntityLinks(json_article['id'], json_article['links'])
+        entity_links = Resolver.get_entity_links(json_article['id'], json_article['links'])
 
-        passages_and_linked_entities = Resolver.getPassagesAndLinkedEntities(substitutions,
-                                                                             resolved_sentences,
-                                                                             entity_links)
+        passages_and_linked_entities = Resolver.get_passages_and_linked_entities(substitutions,
+                                                                                 resolved_sentences,
+                                                                                 entity_links)
 
         for p in passages_and_linked_entities:
 

@@ -12,5 +12,5 @@ class TypeLookup(object):
                 fields = line.split(self.__separator)
                 self.__instanceTypes[fields[0].replace('<', '').replace('>', '')] = fields[1].replace('\n', '')
 
-    def getType(self, uri: str) -> str:
+    def type(self, uri: str) -> str:
         return self.__instanceTypes[uri] if uri in self.__instanceTypes else ''

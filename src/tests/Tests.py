@@ -9,7 +9,7 @@ def resolve(filename, uri):
         text = f.read()
 
     substitutions, _ = Resolver.resolve(text, uri)
-    substituted_text = Resolver.substituteInText(text, substitutions)
+    substituted_text = Resolver.substitute_in_text(text, substitutions)
     print(substituted_text)
 
 
@@ -34,16 +34,16 @@ def resolveAndLinkArticles(filename):
 
                 substitutions, resolvedSentences = Resolver.resolve(
                     text=dataText['text'],
-                    entityURI=dataText['id'])
+                    entity_uri=dataText['id'])
 
-                substitutedText = Resolver.substituteInText(
+                substitutedText = Resolver.substitute_in_text(
                     text=dataText['text'],
                     substitutions=substitutions)
 
-                linkedPassages = Resolver.getPassagesAndLinkedEntities(
+                linkedPassages = Resolver.get_passages_and_linked_entities(
                     substitutions=substitutions,
-                    resolvedSentences=resolvedSentences,
-                    entityLinks=entityLinks)
+                    resolved_sentences=resolvedSentences,
+                    entity_links=entityLinks)
 
                 for linkedPassage in linkedPassages:
                     print(linkedPassage)
