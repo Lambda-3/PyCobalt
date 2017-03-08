@@ -12,6 +12,9 @@ from Resolver import Resolver
 BATCH_SIZE = 200
 
 
+# This file is for mass extractions and not recommended for single use.
+
+
 def run(input_file: TextIOWrapper, output_file: TextIOWrapper, jobs: int, max_articles: Optional[int]) -> None:
     log.info("Import done, now starting work")
 

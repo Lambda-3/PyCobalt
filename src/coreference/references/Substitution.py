@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-# noinspection PyPep8Naming
 class Substitution(object):
     def __init__(self, sentence_index: int, original: str, reference: str):
         self.sentence_index = sentence_index

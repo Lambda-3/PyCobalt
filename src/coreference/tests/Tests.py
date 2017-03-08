@@ -4,6 +4,8 @@ from pprint import pprint
 from Resolver import Resolver
 
 
+# UNUSED, UNSUPPORTED, UNMAINTAINED
+
 def resolve(filename, uri):
     with open(filename, 'r') as f:
         text = f.read()

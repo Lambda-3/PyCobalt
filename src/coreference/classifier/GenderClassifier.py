@@ -1,9 +1,8 @@
-import random
-
 import nltk
+import random
 from nltk.corpus import names
 
-from constant_types import GenderType
+from ..constant_types import GenderType
 
 
 class GenderClassifier(object):

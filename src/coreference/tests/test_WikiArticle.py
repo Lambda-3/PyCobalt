@@ -1,24 +1,14 @@
 import logging
-import os
-import sys
 import unittest
 
+import os
 from nltk import sent_tokenize
+
+from ..Resolver import Resolver
 
 logging.getLogger('requests').setLevel(logging.WARNING)
 
-sys.path.append(
-    os.path.dirname(
-        os.path.dirname(
-            os.path.abspath(__file__)
-        )
-    )
-)
 
-from Resolver import Resolver
-
-
-# noinspection PyProtectedMember
 class TestResolverForBarackObama(unittest.TestCase):
     def setUp(self):
         self.maxDiff = None

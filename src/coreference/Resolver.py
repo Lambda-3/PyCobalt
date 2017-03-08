@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 import logging
+from typing import List, Tuple, Dict, Union, Set
+
 import os
 import re
 from collections import Counter
-
 from nltk.tokenize import sent_tokenize, word_tokenize
 from pycorenlp import StanfordCoreNLP
-from typing import List, Tuple, Dict, Union, Set
 
-from classifier import GenderClassifier
-from constant_types import PronounType, QuantityType, GenderType, EntityType
-from references import NameReference, NominalReference, PronominalReference
-from references import ResolvedPassage
-from references import Substitution
-from references.TypeLookup import TypeLookup
+from .classifier import GenderClassifier
+from .constant_types import PronounType, QuantityType, GenderType, EntityType
+from .references import NameReference, NominalReference, PronominalReference
+from .references import ResolvedPassage
+from .references import Substitution
+from .references.TypeLookup import TypeLookup
 
 logging.getLogger('requests').setLevel(logging.WARNING)
 
@@ -31,8 +31,8 @@ class Resolver(object):
         )
     )
     _separator = '---- <> ----'
-    _nlp = StanfordCoreNLP('http://localhost:9000')
     # _nlp = StanfordCoreNLP('http://localhost:9000')
+    _nlp = StanfordCoreNLP('http://corenlp:9000')
 
     _gender_classifier = GenderClassifier()
 

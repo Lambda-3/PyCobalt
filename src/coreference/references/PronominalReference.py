@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 
-
-# noinspection PyPep8Naming
-from constant_types import EntityType
-from constant_types import GenderType
-from constant_types import PronounType
-from constant_types import QuantityType
+from ..constant_types import EntityType
+from ..constant_types import GenderType
+from ..constant_types import PronounType
+from ..constant_types import QuantityType
 
 
 class PronominalReference(object):

@@ -1,6 +1,6 @@
-from constant_types import EntityType
-from constant_types import GenderType
-from constant_types import QuantityType
+from ..constant_types import EntityType
+from ..constant_types import GenderType
+from ..constant_types import QuantityType
 
 
 class NameReference(object):

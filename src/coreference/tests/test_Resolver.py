@@ -1,21 +1,11 @@
 import logging
-import os
-import sys
 import unittest
 
 from nltk import sent_tokenize
 
+from ..Resolver import Resolver
+
 logging.getLogger('requests').setLevel(logging.WARNING)
-
-sys.path.append(
-    os.path.dirname(
-        os.path.dirname(
-            os.path.abspath(__file__)
-        )
-    )
-)
-
-from Resolver import Resolver
 
 
 # noinspection PyProtectedMember
