@@ -1,4 +1,4 @@
-FROM python:3.5.2
+FROM python:3.6.0
 MAINTAINER Open Semantics Group <osemantics@gmail.com>
 
 # update old version
@@ -16,7 +16,7 @@ RUN python -m nltk.downloader names punkt
 RUN pip install 'uwsgi==2.0.14'
 
 # finally add application
-ADD src/ /app/
+ADD pycobalt/ service.py uwsgi.ini /app/
 
 # Go!
 CMD [ "uwsgi", "--ini", "uwsgi.ini" ]

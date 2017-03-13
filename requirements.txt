@@ -1,4 +1,4 @@
 joblib==0.11
 pycorenlp==0.3.0
-nltk==3.2.2
 Flask==0.12
+nose

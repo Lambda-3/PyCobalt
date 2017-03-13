@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/coreference.iml" filepath="$PROJECT_DIR$/.idea/coreference.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PyCobalt.iml" filepath="$PROJECT_DIR$/.idea/PyCobalt.iml" />
     </modules>
   </component>
 </project>

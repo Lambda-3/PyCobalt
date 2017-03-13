@@ -74,7 +74,7 @@ def _run(article: str) -> str:
                     {
                         'passage': resolved_sentences[p.resolvedPassage].strip(),
                         'id': linked_entity_id,
-                        'term': linked_entity_term.strip(),
+                        'tokens': linked_entity_term.strip(),
                         'type': ''  # making importer happy
                     }
                 )

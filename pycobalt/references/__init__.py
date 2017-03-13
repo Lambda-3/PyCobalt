@@ -1,3 +1,5 @@
+from .Reference import Reference
+
 # noinspection PyUnresolvedReferences
 from .NameReference import NameReference
 # noinspection PyUnresolvedReferences
