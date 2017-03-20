@@ -1,3 +1,9 @@
 examples/
 .gitignore
 README.md
+__pycache__/
+.idea/
+tests/
+run.py
+.git/
+build/

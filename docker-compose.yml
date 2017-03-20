@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  coreference:
+    depends_on:
+      - corenlp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PYCOBALT_CORENLP=http://corenlp:9000
+    ports:
+      - "5128:5128"
+    links:
+      - corenlp
+
+  corenlp:
+    image: "corenlp:370"
+    expose:
+      - "9000"

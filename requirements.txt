@@ -1,4 +1,5 @@
-joblib==0.11
-pycorenlp==0.3.0
-Flask==0.12
+nltk
+joblib
+pycorenlp
+Flask
 nose

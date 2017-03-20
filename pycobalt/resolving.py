@@ -266,7 +266,7 @@ def __first_name_mention(name_references: List[NameReference],
             entity_tokens = []
             for token in sentence.tokens:
                 if len(token.word) > 0 and token.word[0].isupper():
-                    entity_tokens.append(token.word)
+                    entity_tokens.append(token)
                 else:
                     return NameReference(sentence_index=0,
                                          tokens=entity_tokens,
