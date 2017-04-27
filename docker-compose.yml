@@ -16,6 +16,6 @@ services:
       - corenlp
 
   corenlp:
-    image: "corenlp:370"
+    image: "lambdacube/corenlp:3.7.0"
     expose:
       - "9000"

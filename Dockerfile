@@ -1,9 +1,8 @@
-FROM python:3.6.0
+FROM python:3.6.1
 MAINTAINER Open Semantics Group <osemantics@gmail.com>
 
-# update old version
-RUN pip list --local --outdated --format=freeze | cut -d= -f 1 | xargs -n1 pip install -U && \
-    pip install 'uwsgi==2.0.14'
+# Install server requirement
+RUN pip install 'uwsgi==2.0.14'
 
 # add application
 ADD . /app/
