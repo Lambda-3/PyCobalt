@@ -2,7 +2,7 @@ FROM python:3.6.1
 MAINTAINER Open Semantics Group <osemantics@gmail.com>
 
 # Install server requirement
-RUN pip install 'uwsgi==2.0.14'
+RUN pip install 'uwsgi==2.0.15'
 
 # add application
 ADD . /app/
