@@ -52,3 +52,9 @@ Expected output:
   "text": "Donald Trump is the president of USA. Donal Trump is a business man.",
 }
 ```
+
+# Contributors (alphabetical order)
+
+- Andre Freitas
+- Bernhard Bermeitinger
+- Siegfried Handschuh
