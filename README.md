@@ -24,7 +24,6 @@ pip install uwsgi
 This will start the service locally bound to `0.0.0.0:5128`.
 
 ```bash
-cd src
 uwsgi --ini uwsgi.ini
 ```
 
