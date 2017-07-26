@@ -5,7 +5,10 @@ Our service-based alternative to Coreference Resolution.
 
 ## Python Interpreter
 
-**Python 3.5 or 3.6**
+**Python 3.6**
+
+Python <=3.6 don't support variable type hinting.
+The code relies on Python 3.6.x.
 
 The docker container is using 3.6.1.
 
