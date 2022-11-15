@@ -1,5 +1,6 @@
 import os
 import re
+import json
 from pycorenlp import StanfordCoreNLP
 from typing import List, Dict, Any, Union
 
@@ -12,13 +13,14 @@ __nlp = StanfordCoreNLP(__corenlp_url)
 
 
 def annotate_text(text: str = "") -> List[Sentence]:
-    annotations = __nlp.annotate(
+    nlp_res = __nlp.annotate(
         text=_clean_text(text),
         properties={
             'annotators': 'tokenize,ssplit,ner',
             'outputFormat': 'json'
         }
-    )['sentences']
+    )
+    annotations = json.loads(nlp_res)['sentences']
 
     return __convert_corenlp(annotations)
 

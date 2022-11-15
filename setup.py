@@ -9,5 +9,11 @@ setup(name='PyCobalt',
       version=version,
       description='Coreference Resolution',
       author='Bernhard Bermeitinger',
-      packages=['pycobalt'],
-     )
+      packages=[
+          'pycobalt',
+          'pycobalt.classifier',
+          'pycobalt.constant_types',
+          'pycobalt.language',
+          'pycobalt.references'
+      ],
+)
